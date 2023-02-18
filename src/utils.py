@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
-from configparser import ConfigParser
+import json
 
-config=ConfigParser()
-config.read("config.ini")
+with open("config.json") as f:
+    config=json.load(f)
 
 host=config['database']['host']
 user=config['database']['user']
