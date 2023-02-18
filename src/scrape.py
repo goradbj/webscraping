@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 import pandas
 from utils import engine
 
-def get_data(url):
+def get_data():
+    url ="""https://en.wikipedia.org/wiki/List_of_telephone_operating_companies"""
     res=requests.get(url)
     html_content=res.content
     soup=BeautifulSoup(html_content,"html.parser")
