@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas
-from src.utils import engine, scrape_url
+from src.utils import scrape_url
+from src.db import engine
 
 def get_data():
     res=requests.get(scrape_url)
