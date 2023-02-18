@@ -1,0 +1,7 @@
+database:
+    host: localhost
+    user: root
+    password: root
+    database: telecom
+    port: 3306
+    scrape_url: https://en.wikipedia.org/wiki/List_of_telephone_operating_companies

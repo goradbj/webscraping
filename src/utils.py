@@ -1,8 +1,8 @@
 from sqlalchemy import create_engine
-import json
+import yaml
 
-with open("config.json") as f:
-    config=json.load(f)
+with open("config.yaml") as f:
+    config=yaml.safe_load(f)
 
 host=config['database']['host']
 user=config['database']['user']
