@@ -35,10 +35,10 @@ def process_data(table):
     
 def save_data(df1):
     now=datetime.datetime.now()
-    now=now.strftime('%Y_%m_%d')
+    now=now.strftime('%H_%M')
     try:
         mysql_table_name=f"telecom_companies_{now}"
-        df1.to_csv("./data/data1.csv",index=True)
+        df1.to_csv(f"./data/telecom_companies_{now}.csv",index=True)
         df1.to_sql(mysql_table_name, engine, index=True)
         print("Data Scraped and stored localliy and in database")
     except:
